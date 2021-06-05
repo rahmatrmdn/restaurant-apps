@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fa1bacc-b598-4733-bcc3-3858bfa85e6b" name="Default Changelist" comment="" />
+    <list default="true" id="0fa1bacc-b598-4733-bcc3-3858bfa85e6b" name="Default Changelist" comment="first try for submission 1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/images/dicoding.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/images/post-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/images/post-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/images/post-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/images/post-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/images/post-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/images/post-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/restaurants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/restaurants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +36,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1tOnLB3rB6mYG9TotyeR4nKuvc5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -36,6 +61,23 @@
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RunManager">
+    <configuration name="start-dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start-dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start-dev" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -44,12 +86,35 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1622648944546</updated>
-      <workItem from="1622648945574" duration="15865000" />
+      <workItem from="1622648945574" duration="19826000" />
     </task>
+    <task id="LOCAL-00001" summary="first try for submission 1">
+      <created>1622686155160</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1622686155160</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first try for submission 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="first try for submission 1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="551" y="213" key="#ESLint" timestamp="1622651685429">
@@ -60,26 +125,30 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1622652703186" />
-    <state width="1345" height="130" key="GridCell.Tab.0.bottom" timestamp="1622651609689">
+    <state width="1345" height="130" key="GridCell.Tab.0.bottom" timestamp="1622903472101">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="130" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1622651609689" />
-    <state width="1345" height="130" key="GridCell.Tab.0.center" timestamp="1622651609688">
+    <state width="1345" height="130" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1622903472101" />
+    <state width="1345" height="130" key="GridCell.Tab.0.center" timestamp="1622903472099">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="130" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1622651609688" />
-    <state width="1345" height="130" key="GridCell.Tab.0.left" timestamp="1622651609688">
+    <state width="1345" height="130" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1622903472099" />
+    <state width="1345" height="130" key="GridCell.Tab.0.left" timestamp="1622903472097">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="130" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1622651609688" />
-    <state width="1345" height="130" key="GridCell.Tab.0.right" timestamp="1622651609689">
+    <state width="1345" height="130" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1622903472097" />
+    <state width="1345" height="130" key="GridCell.Tab.0.right" timestamp="1622903472100">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="130" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1622651609689" />
+    <state width="1345" height="130" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1622903472099" />
     <state x="184" y="14" key="SettingsEditor" timestamp="1622651709129">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="184" y="14" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1622651709129" />
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1622686177824">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1622686177824" />
     <state x="390" y="102" width="585" height="592" key="find.popup" timestamp="1622685628020">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

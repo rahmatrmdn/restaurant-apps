@@ -14,7 +14,7 @@ export function showRestaurants(data) {
                     </div>
                     <div class="restaurant-item__content">
                         <p class="restaurant-item__date">Rating: ${restaurant.rating}</p>
-                        <h1 class="restaurant-item__title"><a href="#">${restaurant.name}</a></h1>
+                        <h1 class="restaurant-item__title"><a class="restaurant-name" href="#">${restaurant.name}</a></h1>
                         <p class="restaurant-item__description">${restaurant.description}</p>
                     </div>
              </div>
