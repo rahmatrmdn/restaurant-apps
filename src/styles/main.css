@@ -280,6 +280,9 @@ main {
 
 .restaurant-item__thumbnail {
     width: 100%;
+    height: 270px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .restaurant-item__date__author {
@@ -348,3 +351,10 @@ footer a {
     text-decoration: none;
     color: #fff
 }
+
+.skeleton {
+    user-select: none;
+    background-color: #eeeeee;
+    color: #eeeeee;
+}
+

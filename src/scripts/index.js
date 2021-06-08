@@ -1,30 +1,22 @@
+import 'regenerator-runtime';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import './../styles/main.css';
 import './../styles/responsive.css';
-import './../styles/skip-link.css'
-import parseJSON, {data} from "./data";
-import {showRestaurants} from './restaurants';
+import './../styles/skip-link.css';
+import App from './views/app';
 
-const menu = document.querySelector('#menu');
-const hero = document.querySelector('.hero');
-const main = document.querySelector('main');
-const drawer = document.querySelector('#drawer');
-
-document.addEventListener("DOMContentLoaded", function () {
-    showRestaurants(parseJSON(data));
+const app = new App({
+  button: document.querySelector('#menu'),
+  drawer: document.querySelector('#drawer'),
+  content: document.querySelector('main'),
+  hero: document.querySelector('.hero')
 });
 
-menu.addEventListener('click', function (event) {
-    drawer.classList.toggle('open');
-    event.stopPropagation();
+window.addEventListener('hashchange', () => {
+  app.renderPage();
 });
 
-hero.addEventListener('click', function () {
-    drawer.classList.remove('open');
+window.addEventListener('DOMContentLoaded', () => {
+  app.renderPage();
 });
-
-main.addEventListener('click', function () {
-    drawer.classList.remove('open');
-});
-
-
-
