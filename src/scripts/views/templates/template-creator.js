@@ -1,5 +1,25 @@
 import CONFIG from '../../globals/config';
 
+const createRestaurantDetailTemplate = (restaurant) => `
+    <div class="latest">
+      <div class="restaurant-item detail-card">
+        <img class="restaurant__poster" src="${CONFIG.BASE_IMAGE_LARGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
+        <div class="restaurant__info">
+          <h3>Address</h3>
+          <p>${restaurant.city}, ${restaurant.address}</p>
+          <h3>Categories</h3>
+          <p>${restaurantCategories(restaurant.categories)}</p>
+          <h3>Rating</h3> 
+          <p>${restaurant.rating}</p>
+        </div>
+        <div class="restaurant__overview">
+          <h3>Overview</h3>
+          <p>${restaurant.description}</p>
+        </div>
+      </div>
+    </div>
+`;
+
 const createSkeletonRestaurantTemplate = (count) => {
   let template = '';
 
@@ -28,7 +48,7 @@ const createRestaurantItemTemplate = (restaurant) => `
      </div>
      <div class="restaurant-item__content">
         <p class="restaurant-item__date">Rating: ${restaurant.rating}</p>
-        <h1 class="restaurant-item__title"><a class="restaurant-name" href="${`/#/detail/${restaurant.id}`}">${restaurant.name}</a></h1>
+        <h1 class="restaurant-item__title"><a class="restaurant-name" href="/#/detail/${restaurant.id}">${restaurant.name}</a></h1>
         <p class="restaurant-item__description">${restaurant.description}</p>
      </div>
    </div>
@@ -46,24 +66,16 @@ const createLikedButtonTemplate = () => `
   </button>
 `;
 
+const restaurantCategories = (categories) => {
+  return categories.map((category) => {
+    return category.name;
+  }).join(', ');
+};
+
 export {
   createRestaurantItemTemplate,
-  // createRestaurantDetailTemplate,
+  createRestaurantDetailTemplate,
   createLikeButtonTemplate,
   createLikedButtonTemplate,
   createSkeletonRestaurantTemplate
 };
-//
-// <div class="restaurant-item">
-//   <div class="restaurant-item__header">
-//     <img class="restaurant-item__header__poster lazyload" width="100%" height="350px" src="./images/placeholder.png" alt="${restaurant.title}"
-//          data-src="${restaurant.backdrop_path ? CONFIG.BASE_IMAGE_URL + restaurant.backdrop_path : 'https://picsum.photos/id/666/800/450?grayscale'}">
-// <div class="restaurant-item__header__rating">
-//         <p>⭐️<span class="restaurant-item__header__rating__score">${restaurant.vote_average}</span></p>
-//       </div>
-//   </div>
-//   <div class="restaurant-item__content">
-//     <h3><a href="${`/#/detail/${restaurant.id}`}">${restaurant.title}</a></h3>
-//     <p>${restaurant.overview}</p>
-//   </div>
-// </div>

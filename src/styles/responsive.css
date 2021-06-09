@@ -76,6 +76,11 @@
     .restaurant-item__description {
         font-size: 14px;
     }
+
+    .restaurant .restaurant__overview {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
 }
 
 @media screen and (min-width: 700px) {

@@ -21,11 +21,15 @@ const ListRestaurants = {
   async afterRender() {
     const restaurants = await RestaurantApiSource.listRestaurants();
     const restaurantsContainer = document.querySelector('.restaurants');
+    const heroTitle = document.querySelector('.hero__title');
+    const heroTagline = document.querySelector('.hero__tagline');
+
     restaurantsContainer.innerHTML = '';
     restaurants.forEach((restaurant) => {
-      console.log(restaurant.pictureId);
       restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });
+    heroTitle.innerHTML = 'Are You Hungry?';
+    heroTagline.innerHTML = 'Let\'s visit our recommendation restaurants below!';
   }
 };
 
