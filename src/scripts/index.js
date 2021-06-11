@@ -5,6 +5,7 @@ import './../styles/main.css';
 import './../styles/responsive.css';
 import './../styles/skip-link.css';
 import App from './views/app';
+import swRegister from './utils/sw-register';
 
 const app = new App({
   button: document.querySelector('#menu'),
@@ -18,5 +19,6 @@ window.addEventListener('hashchange', () => {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
+  swRegister();
   app.renderPage();
 });

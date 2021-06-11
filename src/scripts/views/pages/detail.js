@@ -1,6 +1,6 @@
 import UrlParser from '../../routes/url-parser';
 import RestaurantApiSource from '../../data/restaurant-api-source';
-import { createRestaurantDetailTemplate } from '../templates/template-creator';
+import { createRestaurantDetailTemplate, createRestaurantEmptyDetailTemplate } from '../templates/template-creator';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const Detail = {
@@ -13,12 +13,15 @@ const Detail = {
 
   afterRender: async function () {
     // lazy load font awesome
-    let scriptElement = document.querySelector('script[src="https://use.fontawesome.com/b070c8f1df.js"]');
+    let linkElement = document.querySelector('link[src="https://fonts.googleapis.com/icon?family=Material+Icons"]');
+    const restaurantContainer = document.querySelector('#restaurant');
+    restaurantContainer.innerHTML = createRestaurantEmptyDetailTemplate();
 
-    if (!scriptElement) {
-      scriptElement = document.createElement('script');
-      scriptElement.src = 'https://use.fontawesome.com/b070c8f1df.js';
-      document.body.appendChild(scriptElement);
+    if (!linkElement) {
+      linkElement = document.createElement('link');
+      linkElement.href = 'https://fonts.googleapis.com/icon?family=Material+Icons';
+      linkElement.rel = 'stylesheet';
+      document.body.appendChild(linkElement);
     }
 
     const url = UrlParser.parseActiveUrlWithoutCombiner();
@@ -29,14 +32,14 @@ const Detail = {
     heroTitle.innerHTML = `This is ${restaurant.name}`;
     heroTagline.innerHTML = 'Let\'s the details below!';
 
-    const restaurantContainer = document.querySelector('#restaurant');
-    restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
+    restaurantContainer.innerHTML = await createRestaurantDetailTemplate(restaurant);
 
-    LikeButtonInitiator.init({
+    await LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       restaurant: {
         id: restaurant.id,
         name: restaurant.name,
+        city: restaurant.city,
         description: restaurant.description,
         pictureId: restaurant.pictureId,
         rating: restaurant.rating

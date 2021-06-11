@@ -8,7 +8,11 @@ const createRestaurantDetailTemplate = (restaurant) => `
           <h3>Address</h3>
           <p>${restaurant.city}, ${restaurant.address}</p>
           <h3>Categories</h3>
-          <p>${restaurantCategories(restaurant.categories)}</p>
+          <p>${restaurantArraySplitter(restaurant.categories)}</p>
+          <h3>Foods</h3>
+          <p>${restaurantArraySplitter(restaurant.menus.foods)}</p>
+          <h3>Drinks</h3>
+          <p>${restaurantArraySplitter(restaurant.menus.drinks)}</p>
           <h3>Rating</h3> 
           <p>${restaurant.rating}</p>
         </div>
@@ -16,7 +20,20 @@ const createRestaurantDetailTemplate = (restaurant) => `
           <h3>Overview</h3>
           <p>${restaurant.description}</p>
         </div>
+        <div class="restaurant__overview">
+          <h3>Customer Reviews</h3>
+          ${restaurantReviewsRender(restaurant.customerReviews)}
+        </div>
       </div>
+    </div>
+`;
+
+const createRestaurantEmptyDetailTemplate = () => `
+    <div class="latest">
+      <div class="restaurant-item detail-card">
+        <div class="restaurant__info">
+          <h3>Please Check Your Internet Connection</h3>
+        </div>
     </div>
 `;
 
@@ -56,25 +73,35 @@ const createRestaurantItemTemplate = (restaurant) => `
 
 const createLikeButtonTemplate = () => `
   <button aria-label="like this restaurant" id="likeButton" class="like">
-     <i class="fa fa-heart-o" aria-hidden="true"></i>
+     <i class="material-icons">favorite_border</i>
   </button>
 `;
 
 const createLikedButtonTemplate = () => `
   <button aria-label="unlike this restaurant" id="likeButton" class="like">
-    <i class="fa fa-heart" aria-hidden="true"></i>
+    <i class="material-icons">favorite</i>
   </button>
 `;
 
-const restaurantCategories = (categories) => {
-  return categories.map((category) => {
-    return category.name;
+const restaurantArraySplitter = (array) => {
+  return array.map((item) => {
+    return item.name;
   }).join(', ');
+};
+
+const restaurantReviewsRender = (array) => {
+  let reviewTemplate = '';
+  array.forEach((review) => {
+    reviewTemplate += `
+          <p>${review.name} (${review.date}) says,<br>"${review.review}"</p>`;
+  });
+  return reviewTemplate;
 };
 
 export {
   createRestaurantItemTemplate,
   createRestaurantDetailTemplate,
+  createRestaurantEmptyDetailTemplate,
   createLikeButtonTemplate,
   createLikedButtonTemplate,
   createSkeletonRestaurantTemplate

@@ -11,7 +11,7 @@ const ListRestaurants = {
           <div class="latest">
               <h1 tabindex="0" class="latest__label">Explore Restaurants</h1>
               <div class="restaurants">
-                ${createSkeletonRestaurantTemplate(15)}
+                ${createSkeletonRestaurantTemplate(6)}
               </div>
           </div>
       </section>
