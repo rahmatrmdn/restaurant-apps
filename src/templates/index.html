@@ -11,6 +11,19 @@
     <title>Hunger Apps</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
     <link rel="manifest" href="manifest.json">
+    <style>
+        /*
+            Mengunakan ini karena CSS Loader error -- membaca directory yang tidak ada (file yang tidak ada)
+         */
+        .hero {
+            background-image: url("images/hero-image_2-large.jpg");
+        }
+        @media only screen and (max-width: 600px) {
+            .hero {
+                background-image: url("images/hero-image_2-small.jpg");
+            }
+        }
+    </style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip To Content</a>
