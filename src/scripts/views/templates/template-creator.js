@@ -5,23 +5,23 @@ const createRestaurantDetailTemplate = (restaurant) => `
       <div class="restaurant-item detail-card">
         <img class="restaurant__poster" src="${CONFIG.BASE_IMAGE_LARGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
         <div class="restaurant__info">
-          <h3>Address</h3>
+          <h2>Address</h2>
           <p>${restaurant.city}, ${restaurant.address}</p>
-          <h3>Categories</h3>
+          <h2>Categories</h2>
           <p>${restaurantArraySplitter(restaurant.categories)}</p>
-          <h3>Foods</h3>
+          <h2>Foods</h2>
           <p>${restaurantArraySplitter(restaurant.menus.foods)}</p>
-          <h3>Drinks</h3>
+          <h2>Drinks</h2>
           <p>${restaurantArraySplitter(restaurant.menus.drinks)}</p>
-          <h3>Rating</h3> 
+          <h2>Rating</h2> 
           <p>${restaurant.rating}</p>
         </div>
         <div class="restaurant__overview">
-          <h3>Overview</h3>
+          <h2>Overview</h2>
           <p>${restaurant.description}</p>
         </div>
         <div class="restaurant__overview">
-          <h3>Customer Reviews</h3>
+          <h2>Customer Reviews</h2>
           ${restaurantReviewsRender(restaurant.customerReviews)}
         </div>
       </div>
@@ -32,7 +32,7 @@ const createRestaurantEmptyDetailTemplate = () => `
     <div class="latest">
       <div class="restaurant-item detail-card">
         <div class="restaurant__info">
-          <h3>Please Check Your Internet Connection</h3>
+          <h2>Please Check Your Internet Connection</h2>
         </div>
     </div>
 `;
@@ -47,7 +47,7 @@ const createSkeletonRestaurantTemplate = (count) => {
          <img class="restaurant-item__header__poster" width="100%" height="350px" src="./images/placeholder.png" alt="skeleton">
        </div>
        <div class="restaurant-item__content">
-          <h3 class="skeleton">Lorem ipsum dolor sit.</a></h3>
+          <h2 class="skeleton">Lorem ipsum dolor sit.</a></h2>
           <p class="skeleton">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias aspernatur, assumenda aut consectetur consequuntur debitis deleniti dicta dolorem dolorum eos exercitationem labore laboriosam magni nihil, nobis obcaecati optio perspiciatis placeat qui recusandae saepe sapiente sequi totam ullam ut.</p>
        </div>
    </div>

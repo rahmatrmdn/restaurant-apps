@@ -51,4 +51,8 @@ Scenario('liking then unliking a restaurant', async ({ I }) => {
   const unlikedRestaurantNameThatTheFirstRestaurantBefore = await I.grabTextFrom(locate('.restaurant-item__title a').first());
 
   assert.strictEqual(likedRestaurantNameThatWillBeUnliked, unlikedRestaurantNameThatTheFirstRestaurantBefore);
+
+  // checking on favorite page
+  I.amOnPage('#/like');
+  I.see('There is No Favorite', '.hero__title');
 });
